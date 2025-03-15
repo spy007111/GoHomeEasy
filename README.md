@@ -15,7 +15,7 @@ It leverages **Lucky's NAT traversal** and automatic subscription updates, allow
 ✅ **Supports dynamic configuration of Shadowsocks `method` (encryption method) and `password`**  
 ✅ **Based on Cloudflare Workers + KV, no need for a self-hosted server**  
 ✅ **API Key authentication ensures data security**  
-✅ **Supports Cloudflare custom domain access to bypass `workers.dev` restrictions in China**  
+✅ **Supports Cloudflare custom domain access to bypass `workers.dev` restrictions in Mainland China**  
 
 ---
 
@@ -61,7 +61,7 @@ Using PassWall2 as an example:
 4. Enter **Service Name** (e.g., `GoHomeEasy`), click **Deploy**
 
 ### 2️⃣ **Edit Workers Code**
-1. Open the newly created Worker, click **"< />"** to edit the code
+1. Open the newly created Worker, click **"< / >"** to edit the code
 2. Delete the default code
 3. Paste **`GoHomeEasy.js` code** from this repository
 4. Modify `"your_secure_api_key"` in the source code and keep it safe
@@ -78,7 +78,7 @@ Using PassWall2 as an example:
 
 ---
 
-## 🌍 **Use Cloudflare Custom Domain (Optional, for China Bypass)**
+## 🌍 **Use Cloudflare Custom Domain (Optional, only recommend for Mainland China Users)**
 
 Follow these steps: [EdgeTunnel Issue #27](https://github.com/zizifn/edgetunnel/issues/27)
 
