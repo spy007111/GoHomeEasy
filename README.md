@@ -1,6 +1,8 @@
 # 🚀 GoHomeEasy
 
-**GoHomeEasy** 是一个基于 Cloudflare Workers 的 Shadowsocks 订阅管理工具，专为 **没有公网 IP 的家庭宽带用户** 设计，能够在外部网络访问家庭局域网。它利用 **Lucky提供的内网穿透**，并结合订阅自动更新，使用户可以在 **任何地方远程访问家中的 Shadowsocks 服务器**，无需手动频繁更换动态IP地址和端口。
+**GoHomeEasy** 是一个基于 Cloudflare Workers 的 Shadowsocks 订阅管理工具，专为 **没有公网 IP 的家庭宽带用户** 设计，能够在外部网络访问家庭局域网。
+
+它利用 **Lucky提供的内网穿透**，并结合订阅自动更新，使用户可以在 **任何地方远程访问家中的 Shadowsocks 服务器**，无需手动频繁更换动态IP地址和端口。
 
 ---
 
@@ -36,6 +38,24 @@
 
 🔹 **支持解析Shadowsocks订阅的手机/电脑客户端**（如iOS中的Shadowrocket APP）
 
+## 💻 **配置Shadowsocket服务器**
+
+以Passwall2为例：
+
+### **1️⃣ 在Passwall2的 “服务器端” 选项卡中点击 “添加” 按钮**
+### **2️⃣ 按以下内容配置：**
+   - 启用：勾选
+   - 备注：自定名称
+   - 类型：Sing-Box
+   - 协议名称：Shadowsocks
+   - 监听端口：8000（或自选）
+   - 密码：自定
+   - 加密：自选，建议选择chacha20-ietf-poly1305
+   - 接受局域网访问：**请务必勾选**
+   - 其他保持默认即可
+### **3️⃣ 点击右下角“保存并应用“按钮，回到主菜单**
+### **4️⃣ 勾选“启用”，之后点击右下角“保存并应用“按钮**
+
 
 ---
 
@@ -51,7 +71,8 @@
 1. 进入 **新建的 Worker**，点击右上角 **“< / >” 按钮**，编辑项目代码
 2. **删除默认代码**
 3. **粘贴 `GoHomeEasy.js` 代码**（你可以在本项目的 `GoHomeEasy.js` 文件中找到完整代码）
-4. **点击 “部署” 按钮**
+4. **修改源代码中的"your_secure_api_key"**，并保留好这一密钥字段
+5. **点击 “部署” 按钮**
 
 ### **3️⃣ 绑定 Cloudflare KV 存储**
 1. 进入左侧菜单 **对象和数据库** → **KV**
@@ -90,7 +111,7 @@
 ### **2️⃣ 请求头（Headers）**
 ```json
 {
-  "Authorization": "Bearer `your_secure_api_key`",
+  "Authorization": "Bearer your_secure_api_key",
   "Content-Type": "application/json"
 }
 ```
@@ -101,7 +122,7 @@
   "ip": "#{ip}",
   "port": "#{port}",
   "method": "chacha20-ietf-poly1305",
-  "password": "`your_password`"
+  "password": "your_password"
 }
 ```
 
@@ -158,4 +179,3 @@
 ---
 
 🚀 **GoHomeEasy，让没有公网 IP 的家庭宽带用户也能随时随地访问家庭局域网！** 🌎
-
