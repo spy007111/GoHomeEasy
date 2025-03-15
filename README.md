@@ -7,10 +7,15 @@
 ## 🌟 **功能特点**
 
 ✅ **适合没有公网 IP 的家庭宽带用户，远程访问家庭局域网**  
+
 ✅ **支持 Lucky Webhook 自动更新 Shadowsocks 订阅**  
+
 ✅ **支持动态配置 Shadowsocks `method`（加密方式）和 `password`（密码）**  
+
 ✅ **基于 Cloudflare Workers + KV，无需自建服务器**  
+
 ✅ **支持 API Key 认证，确保数据安全**  
+
 ✅ **支持 Cloudflare 自有域名访问，绕过 `workers.dev` 在中国大陆的屏蔽**  
 
 ---
@@ -20,11 +25,17 @@
 要成功部署 **GoHomeEasy**，你需要准备以下环境：
 
 🔹 **Linux家庭服务器或OpenWRT软路由**
+
 🔹 **配置Shadowsocks服务器**（推荐使用OpenWRT中的[PassWall2插件](https://github.com/xiaorouji/openwrt-passwall2)）
+
 🔹 **安装[Lucky 内网穿透](https://lucky666.cn)**，按教程开启内网穿透功能，将Shadowsocks服务器端口映射到公网
+
 🔹 **Cloudflare账号**（免费账号即可，用于 Workers 部署）
+
 🔹 **使用Cloudflare管理DNS解析的域名**（可选，仅用于绕过中国大陆对workers.dev域名的屏蔽）
+
 🔹 **支持解析Shadowsocks订阅的手机/电脑客户端**（如iOS中的Shadowrocket APP）
+
 
 ---
 
