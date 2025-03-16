@@ -72,9 +72,13 @@
 ### **2️⃣ 编辑 Workers 代码**
 1. 进入 **新建的 Worker**，点击右上角 **“< / >” 按钮**，编辑项目代码
 2. **删除默认代码**
-3. **粘贴 `GoHomeEasy.js` 代码**（你可以在本项目的 `GoHomeEasy.js` 文件中找到完整代码）
-4. **修改源代码中的"your_secure_api_key"**，并保留好这一密钥字段
-5. **点击 “部署” 按钮**
+3. **粘贴 `GoHomeEasy_XXX.js` 代码**
+
+   3.1 本项目的 `GoHomeEasy_SS.js` 文件对应Shadowsocket标准订阅格式
+   
+   3.2 本项目的 `GoHomeEasy_Clash.js` 文件对应Clash YAML标准订阅格式
+5. **修改源代码中的"your_secure_api_key"**，并保留好这一密钥字段
+6. **点击 “部署” 按钮**
 
 ### **3️⃣ 绑定 Cloudflare KV 存储**
 1. 进入左侧菜单 **对象和数据库** → **KV**
