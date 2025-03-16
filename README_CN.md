@@ -38,7 +38,7 @@
 
 🔹 **使用Cloudflare管理DNS解析的域名**（可选，仅用于绕过中国大陆对workers.dev域名的屏蔽）
 
-🔹 **支持解析Shadowsocks订阅的手机/电脑客户端**（如iOS中的Shadowrocket APP）
+🔹 **支持解析Shadowsocks或Clash YAML订阅的手机/电脑客户端**（如iOS中的Shadowrocket APP）
 
 ## 💻 **配置Shadowsocket服务器**
 
