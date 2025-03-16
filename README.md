@@ -100,8 +100,8 @@ In **Lucky Webhook Settings**, enter the following:
 
 ### 2️⃣ **Request Headers**
 ```json
-  Authorization: Bearer your_secure_api_key,
   Content-Type: application/json
+  Authorization: Bearer your_secure_api_key
 ```
 
 ### 3️⃣ **Request Body**
