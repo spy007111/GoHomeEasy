@@ -40,7 +40,7 @@
 
 🔹 **支持解析Shadowsocks或Clash YAML订阅的手机/电脑客户端**（如iOS中的Shadowrocket APP）
 
-## 💻 **配置Shadowsocket服务器**
+## 💻 **配置Shadowsocks服务器**
 
 以Passwall2为例：
 
@@ -74,7 +74,7 @@
 2. **删除默认代码**
 3. **粘贴 `GoHomeEasy_XXX.js` 代码**
 
-   3.1 本项目的 `GoHomeEasy_SS.js` 文件对应Shadowsocket标准订阅格式。
+   3.1 本项目的 `GoHomeEasy_SS.js` 文件对应Shadowsocks标准订阅格式。
    
    3.2 本项目的 `GoHomeEasy_Clash.js` 文件对应Clash YAML标准订阅格式。
 
