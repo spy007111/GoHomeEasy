@@ -112,10 +112,8 @@
 
 ### **2️⃣ 请求头（Headers）**
 ```json
-{
-  "Authorization": "Bearer your_secure_api_key",
-  "Content-Type": "application/json"
-}
+  Authorization: "Bearer your_secure_api_key",
+  Content-Type: "application/json"
 ```
 
 ### **3️⃣ 请求体（Body）**
