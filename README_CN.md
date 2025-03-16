@@ -112,7 +112,7 @@
 
 ### **2️⃣ 请求头（Headers）**
 ```
-  Authorization: Bearer [[your_secure_api_key]],
+  Authorization: Bearer 此处替换为你的API_KEY,
   Content-Type: application/json
 ```
 
