@@ -74,9 +74,12 @@
 2. **删除默认代码**
 3. **粘贴 `GoHomeEasy_XXX.js` 代码**
 
-   3.1 本项目的 `GoHomeEasy_SS.js` 文件对应Shadowsocket标准订阅格式
+   3.1 本项目的 `GoHomeEasy_SS.js` 文件对应Shadowsocket标准订阅格式。
    
-   3.2 本项目的 `GoHomeEasy_Clash.js` 文件对应Clash YAML标准订阅格式
+   3.2 本项目的 `GoHomeEasy_Clash.js` 文件对应Clash YAML标准订阅格式。
+
+   如果使用iOS Shadowrocket APP，二者都可以。否则请根据你使用的APP选择支持的格式。
+   
 5. **修改源代码中的"your_secure_api_key"**，并保留好这一密钥字段
 6. **点击 “部署” 按钮**
 
