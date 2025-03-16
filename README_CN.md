@@ -93,9 +93,15 @@
 
 ---
 
-## 🔗 **配置 Lucky Webhook**
+## 🔗 **配置 Lucky STUN内网穿透Webhook**
 
-在 **Lucky Webhook 配置页面**，填写以下内容：
+在 **Lucky STUN内网穿透配置页面**，填写以下内容：
+
+1. **穿透类型**：IPV4-TCP
+2. **UPnP**：开启（如果你的Lucky安装在非拨号路由器设备，需要开启本选项，并需要开启拨号路由器设备的UPnP）
+3. **不使用Lucky内置端口转发**：建议开启，可以有效增加访问速度）如果遇到问题，可以尝试关闭）
+4. **UPnP 内部端口自定义**：（Passwall中设置的）Shadowrocket服务端口，如8000
+5. **Webhook**：开启，并填写以下内容：
 
 ### **1️⃣ Webhook URL（POST 请求）**
 
@@ -103,17 +109,17 @@
 
 - 🌍 **Cloudflare Workers 原生域名**（适用于未被屏蔽地区）：
  ```
- https://your-worker-name.workers.dev/
+ https://your-worker-name.your-account-name.workers.dev/
  ```
 - 🇨🇳 **Cloudflare 自有域名**（适用于中国大陆）：
  ```
- https://gohome.yourdomain.com/
+ https://your-gohome-name.yourdomain.com/
  ```
 
 ### **2️⃣ 请求头（Headers）**
 ```
-  Authorization: Bearer 此处替换为你的API_KEY,
-  Content-Type: application/json
+   Content-Type: application/json
+   Authorization: Bearer 此处替换为你的API_KEY 
 ```
 
 ### **3️⃣ 请求体（Body）**
@@ -130,6 +136,11 @@
 - `#{ip}` 和 `#{port}` 是 Lucky 自动填充的公网 IP 和端口。
 - `method` 可根据 Shadowsocks 服务器的加密方式调整（推荐使用 `chacha20-ietf-poly1305`）。
 - `password` 为 Shadowsocks 服务器的连接密码。
+
+### **重要❗️：（给中国大陆用户）
+
+1. 如果你的Lucky所在服务器可自动翻墙，请务必在翻墙服务设置STUN服务的3478端口为【直连（不翻墙）】，否则获取到的公网IP会错误。**
+2. 如果你的Lucky所在服务器不可自动翻墙，HTTPS协议访问Cloudflare域名可能会遇到404错误，导致webhook更新失败。如遇到此问题，建议配置将该服务器可自动翻墙，或者可以尝试在Webhook URL改为http访问（但因此请求会明文发送，导致API_KEY泄漏）。
 
 ---
 
